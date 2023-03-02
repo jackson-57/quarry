@@ -263,7 +263,7 @@ class SpawningClientProtocol(ClientProtocol):
             if self.protocol_version > 47:
                 teleport_id = buff.unpack_varint()
 
-            if self.protocol_version > 754:
+            if self.protocol_version > 754 and self.protocol_version < 1073741949:
                 dismount_vehicle = buff.unpack('?')
 
         # Send Player Position And Look
