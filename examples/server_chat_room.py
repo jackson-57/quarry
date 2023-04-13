@@ -89,7 +89,7 @@ class ChatRoomProtocol(ServerProtocol):
         ]
 
         # <1.19.4 needs flag for leaving vehicle
-        if self.protocol_version < 1073741949:
+        if self.protocol_version < 762:
             player_position_data.append(self.buff_type.pack("?", True)) # Leave vehicle
 
         self.send_packet("player_position_and_look", *player_position_data)
